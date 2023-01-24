@@ -17,8 +17,11 @@ class ProviderController extends Controller
             [
                 "name" => 'Fornecedor 1',
                 "status" => "N",
+                "document" => "" 
             ]
         ];
+
+        // empty values: 0, '0', [], null, '', false
 
         return view('app.provider.index', compact('providers'));
     }

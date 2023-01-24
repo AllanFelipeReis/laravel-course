@@ -37,6 +37,10 @@
         <h3>Document {{ $providers[0]['document'] }}</h3>
     @endisset
 
-    @dd($providers)
 @endisset
 
+@empty($providers[1]['document'])
+    - Vazio
+@endempty
+
+@dd($providers)
