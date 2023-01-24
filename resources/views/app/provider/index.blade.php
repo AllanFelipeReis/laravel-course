@@ -26,8 +26,17 @@
 
 @endif
 
-@unless ($providers[0]['status'] == 'S') {{-- Executa se a condição for falsa --}}
-    <h4>Fornecedor Inativo</h4>
-@endunless
+@isset($providers)
+    <h4>Há fornecedores</h4>
 
-@dd($providers)
+    @unless ($providers[0]['status'] == 'S') {{-- Executa se a condição for falsa --}}
+        <h4>Fornecedor Inativo</h4>
+    @endunless
+
+    @isset($providers[0]['document'])
+        <h3>Document {{ $providers[0]['document'] }}</h3>
+    @endisset
+
+    @dd($providers)
+@endisset
+

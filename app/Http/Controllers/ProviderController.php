@@ -11,7 +11,12 @@ class ProviderController extends Controller
         $providers = [
             [
                 "name" => 'Fornecedor 1',
-                "status" => "N"
+                "status" => "N",
+                "document" => "00.000.000/0000-00"
+            ],
+            [
+                "name" => 'Fornecedor 1',
+                "status" => "N",
             ]
         ];
 
