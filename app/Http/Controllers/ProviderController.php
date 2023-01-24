@@ -8,6 +8,8 @@ class ProviderController extends Controller
 {
     public function index()
     {
+        // empty values: 0, '0', [], null, '', false
+
         $providers = [
             [
                 "name" => 'Fornecedor 1',
@@ -21,7 +23,9 @@ class ProviderController extends Controller
             ]
         ];
 
-        // empty values: 0, '0', [], null, '', false
+        $msg = empty($providers[1]["document"]) ? "CNPJ inválido" : "CNPJ válido";
+
+        echo $msg;
 
         return view('app.provider.index', compact('providers'));
     }
