@@ -34,8 +34,10 @@
     @endunless
 
     @isset($providers[0]['document'])
-        <h3>Document {{ $providers[0]['document'] }}</h3>
+        <h3>Documento {{ $providers[0]['document'] }}</h3>
     @endisset
+
+    <h3>Documento {{ $providers[1]['document'] ?? "CNPJ não informado" }}</h3>
 
 @endisset
 

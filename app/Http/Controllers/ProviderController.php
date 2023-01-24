@@ -19,7 +19,7 @@ class ProviderController extends Controller
             [
                 "name" => 'Fornecedor 1',
                 "status" => "N",
-                "document" => "" 
+                "document" => null
             ]
         ];
 
