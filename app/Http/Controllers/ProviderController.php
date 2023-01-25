@@ -14,12 +14,23 @@ class ProviderController extends Controller
             [
                 "name" => 'Fornecedor 1',
                 "status" => "N",
-                "document" => "00.000.000/0000-00"
+                "document" => "00.000.000/0000-00",
+                "ddd" => "11",
+                "phone" => "12332-1243"
             ],
             [
-                "name" => 'Fornecedor 1',
+                "name" => 'Fornecedor 2',
+                "status" => "S",
+                "document" => null,
+                "ddd" => "19",
+                "phone" => "43232-1234"
+            ],
+            [
+                "name" => 'Fornecedor 3',
                 "status" => "N",
-                "document" => null
+                "document" => null,
+                "ddd" => "32",
+                "phone" => "43232-1234"
             ]
         ];
 
@@ -30,3 +41,4 @@ class ProviderController extends Controller
         return view('app.provider.index', compact('providers'));
     }
 }
+ 

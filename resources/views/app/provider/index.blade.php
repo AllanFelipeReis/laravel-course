@@ -45,4 +45,18 @@
     - Vazio
 @endempty
 
+@switch($providers[2]["ddd"])
+    @case("11")
+        São Paulo - SP
+        @break
+    @case("19")
+        Rio Claro - SP
+        @break
+    @case("32")
+        Juiz de Fora - MG
+        @break
+    @default
+        Cidade não localizada
+@endswitch
+
 @dd($providers)
