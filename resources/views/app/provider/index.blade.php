@@ -119,4 +119,14 @@
     Telefone: ({{ $provider["ddd"] }}) {{ $provider["phone"] }} <br> <hr>
 @endforeach
 
+@forelse ($providers as $key => $provider)
+    ID: {{ $key }} <br>
+    Fornecedor: {{ $provider['name'] }} <br>
+    Status: {{ $provider["status"] }} <br>
+    CNPJ: {{ $provider["document"] }} <br>
+    Telefone: ({{ $provider["ddd"] }}) {{ $provider["phone"] }} <br> <hr>
+@empty
+    Não há fornecedores
+@endforelse
+
 @dd($providers)
