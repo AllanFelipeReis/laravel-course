@@ -44,7 +44,7 @@
 @empty($providers[1]['document'])
     - Vazio
 @endempty
-
+<br>
 @switch($providers[2]["ddd"])
     @case("11")
         São Paulo - SP
@@ -58,5 +58,27 @@
     @default
         Cidade não localizada
 @endswitch
+<br><hr>
+@for ($i = 0; $i < count($providers); $i++)
+    Fornecedor: {{ $providers[$i]['name'] }} <br>
+    Status: {{ $providers[$i]["status"] }} <br>
+    CNPJ: {{ $providers[$i]["document"] }} <br>
+    Telefone: ({{ $providers[$i]["ddd"] }}) {{ $providers[$i]["phone"] }} <br>
+    Cidade: 
+    @switch($providers[$i]["ddd"])
+        @case("11")
+            São Paulo - SP
+            @break
+        @case("19")
+            Rio Claro - SP
+            @break
+        @case("32")
+            Juiz de Fora - MG
+            @break
+        @default
+            Cidade não localizada
+    @endswitch
+    <hr>
+@endfor
 
 @dd($providers)
