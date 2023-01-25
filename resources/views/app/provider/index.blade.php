@@ -129,4 +129,6 @@
     Não há fornecedores
 @endforelse
 
+@{{ Bloco não vai ser interpretado }}
+
 @dd($providers)
