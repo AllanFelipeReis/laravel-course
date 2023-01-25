@@ -105,10 +105,18 @@
             Cidade não localizada
     @endswitch
     <hr>
-    
+
     @php
         $i++;
     @endphp
 @endwhile
+
+@foreach ($providers as $key => $provider)
+    ID: {{ $key }} <br>
+    Fornecedor: {{ $provider['name'] }} <br>
+    Status: {{ $provider["status"] }} <br>
+    CNPJ: {{ $provider["document"] }} <br>
+    Telefone: ({{ $provider["ddd"] }}) {{ $provider["phone"] }} <br> <hr>
+@endforeach
 
 @dd($providers)
