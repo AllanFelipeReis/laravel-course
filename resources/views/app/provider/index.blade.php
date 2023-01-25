@@ -120,6 +120,12 @@
 @endforeach
 
 @forelse ($providers as $key => $provider)
+    {{-- Apenas para o foreach e forelse --}}
+    Iteração atual: {{ $loop->iteration }} <br>
+    Primeira iteração: {{ $loop->first ? "true" : "false"}} <br>
+    Primeira última: {{ $loop->last ? "true" : "false"}} <br>
+    Total de registros: {{ $loop->count }} <br>
+
     ID: {{ $key }} <br>
     Fornecedor: {{ $provider['name'] }} <br>
     Status: {{ $provider["status"] }} <br>
