@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="{{ asset("css/style.css") }}">
     </head>
     <body>
+        @include('site.layouts._partials.head')
         @yield('content')
     </body>
 </html>
