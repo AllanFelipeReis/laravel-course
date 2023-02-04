@@ -7,6 +7,7 @@ Route::get('/', 'HomeController@view')->name('site.index');
 Route::get('/sobre-nos', 'AboutUsController@view')->name('site.about');
 
 Route::get('/contato', 'ContactController@view')->name('site.contact');
+Route::post('/contato', 'ContactController@view')->name('site.contact');
 
 Route::get('/login', function() {return 'Login';})->name('site.login');
 
