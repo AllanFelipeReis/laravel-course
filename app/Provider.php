@@ -21,3 +21,11 @@ class Provider extends Model
         "email"
     ];
 }
+
+/**
+ * 
+ * Method ::all() -> Return Collections
+ * Method ::find($primary_key) -> Return one object or one collection (if passed one array)
+ * Method ::where("column", "operator", "value") -> Return one Builder // Operators = [like, =, <, >, !=, <=, =>, <>]
+ * Method ->get() -> return one collection
+ */
