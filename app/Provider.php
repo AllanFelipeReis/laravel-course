@@ -37,4 +37,6 @@ class Provider extends Model
  * Method ::whereMonth()
  * Method ::whereYear()
  * Method ::whereTime()
+ * Method ::whereColumn() {compara duas colunas quando as duas não são null}
+ * Method ::where(function($query) {}) { where recebe um callback para criar grupos de condições }
  */
